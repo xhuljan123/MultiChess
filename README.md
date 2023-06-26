@@ -1,2 +1,2 @@
 # MultiChess
-MultiChess - Javascript chess engine
+Javascript chess engine
