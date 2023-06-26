@@ -1,6 +1,7 @@
 # MultiChess - Javascript chess engine
 
-MultiChess is designed to give you the best gaming experience with a variety of customisation options and game modes. Whether you're looking to improve your skills or just have fun, this script is made easy for every one.
+Designed to give you the best gaming experience with a variety of customisation options and game modes. Whether you're looking to improve your skills or just have fun, this script is made easy for every one.
+The script is builded in javascript and has no dependecies.
 
 ### Features
 - User friendly integration. Module import or browser ready integration
