@@ -1,0 +1,27 @@
+.OutsideContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  cursor: auto;
+}
+
+.Button {
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.Arrow {
+  transition: transform 0.3s;
+
+  &.open {
+    transform: rotate(90deg);
+  }
+
+  &.end {
+    margin-left: auto;
+  }
+}

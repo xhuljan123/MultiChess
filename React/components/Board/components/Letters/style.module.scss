@@ -1,0 +1,60 @@
+.BoardLetters {
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+
+  &.BoardFlipped {
+    flex-direction: row-reverse;
+
+    .Letter {
+      &:nth-child(odd) {
+        color: var(--black-square);
+      }
+      &:nth-child(even) {
+        color: var(--white-square);
+      }
+    }
+  }
+
+  &.LettersTop {
+    bottom: initial;
+    top: 3px;
+
+    .Letter {
+      &:nth-child(odd) {
+        color: var(--black-square);
+      }
+      &:nth-child(even) {
+        color: var(--white-square);
+      }
+    }
+
+    &.BoardFlipped {
+      .Letter {
+        &:nth-child(odd) {
+          color: var(--white-square);
+        }
+        &:nth-child(even) {
+          color: var(--black-square);
+        }
+      }
+    }
+  }
+}
+
+.Letter {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+  width: calc(100% / 8);
+  color: var(--white-square);
+
+  &:nth-child(even) {
+    color: var(--black-square);
+  }
+}

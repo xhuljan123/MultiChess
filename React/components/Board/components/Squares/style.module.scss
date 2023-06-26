@@ -1,0 +1,71 @@
+.Squares {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+}
+
+.SquaresContainer {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  border-radius: 3px;
+}
+
+.BoardSquare {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 8);
+  height: calc(100% / 8);
+  padding: 1%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+}
+
+.Square-white {
+  background-color: var(--white-square);
+
+  &.SquareOver {
+    box-shadow: inset 0px 0px 20px 4px var(--black-square);
+  }
+}
+
+.Square-black {
+  background-color: var(--black-square);
+
+  &.SquareOver {
+    box-shadow: inset 0px 0px 8px 4px var(--white-square);
+  }
+}
+
+.SquareValid {
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: var(--valid-square);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.SquareSelected {
+  background-color: var(--selected-square);
+}
+
+.SquareCheck {
+  background-color: var(--check-square);
+}

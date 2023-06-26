@@ -1,0 +1,61 @@
+.Board {
+  --color: #fff;
+  --color-black: #444;
+  --background-color: #5f636d;
+  --border-color: #5f636d;
+  --border-color-light: #6e727b;
+  --white-square: #F8F0E1;
+  --black-square: #727A88;
+  --valid-square: #00fdff;
+  --check-square: rgb(194, 41, 41);
+  --selected-square: #6c2be3;
+  --promote-background-color: #484d57;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  position: relative;
+  min-width: 250px;
+  max-width: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  [draggable="true"] {
+    cursor: grab;
+  }
+}
+
+.BoardCenter {
+  margin: auto;
+}
+
+.BoardContainer {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid var(--border-color);
+}
+
+@media only screen and (orientation: landscape) {
+  .Board {
+    max-width: calc(100vh - 20px);
+
+    &.BoardWithActions.BoardCenter {
+      left: -15px;
+      max-width: calc(100vh - 50px);
+    }
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .Board {
+    max-width: calc(100vw - 20px);
+
+    &.BoardWithActions.BoardCenter {
+      left: -15px;
+      max-width: calc(100vw - 50px);
+    }
+  }
+}

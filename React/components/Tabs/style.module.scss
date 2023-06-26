@@ -1,0 +1,17 @@
+@import '../../style/colors';
+
+.Header {
+  display: flex;
+}
+
+.TabItem {
+  padding: 8px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+  &.active {
+    color: map-get($colors, 'infoBackgroundColor');
+    background-color: map-get($colors, 'info');
+  }
+}
+

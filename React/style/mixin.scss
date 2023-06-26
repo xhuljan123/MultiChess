@@ -1,0 +1,48 @@
+@import './colors';
+
+$types: 'primary', 'info', 'success', 'error', 'warning';
+
+@mixin ItemColors($prefix, $border: 0) {
+  @each $item in $types {
+    $color: map-get($colors, #{$item}BackgroundColor);
+    $background: map-get($colors, $item);
+
+    .#{$prefix}-#{$item} {
+      color: $color;
+      background-color: $background;
+  
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($background, 0.3);
+      }
+  
+      @if $border {
+        border-color: darken($background, 5%);
+      }
+
+      kbd {
+        background-color: $background;
+      }
+    }
+
+    .#{$prefix}-#{$item}-light {
+      $colorNew: darken($background, 20%);
+      $backgroundNew: lighten($background, 45%);
+
+      color: $colorNew;
+      background-color: $backgroundNew;
+  
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba($backgroundNew, 0.3);
+      }
+  
+      @if $border {
+        border-color: $background;
+      }
+
+      kbd {
+        color: darken($colorNew, 10%);
+        background-color: darken($backgroundNew, 15%);
+      }
+    }
+  }
+}

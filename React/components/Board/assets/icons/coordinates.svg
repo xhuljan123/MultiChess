@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" >
+  <g stroke-width="5.446" fill-rule="evenodd">
+    <path d="M81.945 81.775l6.08 8.922L81.701 100h4.92l4.225-6.227l4.26 6.227H100l-6.322-9.303l6.078-8.922h-4.932l-3.978 5.871l-3.992-5.87z" />
+    <path d="M0 0l6.945 10.547v7.678h4.701v-7.678L18.592 0h-5.153L9.29 6.494L5.14 0z" />
+    <path d="M7 28v65h65v-5H12V28H7z" />
+  </g>
+</svg>

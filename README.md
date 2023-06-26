@@ -38,4 +38,3 @@ Start playing
 Find full documentation here: [Documentation](https://chess-nu-lyart.vercel.app/#/)
 
 Try here: [Play Chess](https://chess-nu-lyart.vercel.app)
-

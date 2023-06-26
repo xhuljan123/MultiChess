@@ -1,0 +1,52 @@
+.Root {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.Item {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  color: var(--color);
+  background-color: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+}
+
+.Pieces {
+  flex-direction: column;
+  flex-shrink: 0;
+  max-width: 100%;
+  gap: 5px;
+}
+
+.Actions {
+  flex-grow: 1;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  min-width: 142px;
+}
+
+.Piece {
+  width: 50px;
+}
+
+.PiecesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.ActionsIcons {
+  cursor: pointer;
+  width: 35px;
+}
+
+@media only screen and (max-width: 700px) {
+  .Piece {
+    width: 40px;
+  }
+}

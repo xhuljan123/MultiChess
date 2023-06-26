@@ -1,0 +1,60 @@
+.BoardRanks {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+
+  &.BoardFlipped {
+    flex-direction: column-reverse;
+
+    .Rank {
+      &:nth-child(odd) {
+        color: var(--white-square);
+      }
+      &:nth-child(even) {
+        color: var(--black-square);
+      }
+    }
+  }
+
+  &.RankRight {
+    left: initial;
+    right: 4px;
+
+    .Rank {
+      &:nth-child(odd) {
+        color: var(--white-square);
+      }
+      &:nth-child(even) {
+        color: var(--black-square);
+      }
+    }
+
+    &.BoardFlipped {
+      .Rank {
+        &:nth-child(odd) {
+          color: var(--black-square);
+        }
+        &:nth-child(even) {
+          color: var(--white-square);
+        }
+      }
+    }
+  }
+}
+
+.Rank {
+  display: flex;
+  height: calc(100% / 8);
+  margin-top: 3px;
+  color: var(--white-square);
+
+  &:nth-child(odd) {
+    color: var(--black-square);
+  }
+}
